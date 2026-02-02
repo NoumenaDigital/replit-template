@@ -50,8 +50,7 @@ setup: env install lsp
 	@echo "📦 Dependencies installed! Now you need to login."
 	@echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	@echo ""
-	@echo "🔐 Opening browser for Noumena Cloud login..."
-	@export PATH="$$HOME/.npl/bin:$$PATH" && npl cloud login
+	@$(MAKE) login
 	@echo ""
 	@echo "✅ Logged in! Continuing with deployment..."
 	@$(MAKE) deploy-npl client
