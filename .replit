@@ -4,7 +4,7 @@
 # On boot: Ask user to setup config parameters
 
 # Run command checks for setup first
-run = "make replit-run"
+run = "make run"
 entrypoint = "frontend/src/App.tsx"
 
 hidden = [".config", "node_modules", ".git", "dist"]
