@@ -43,7 +43,50 @@ If this is published as a Replit template, simply click **Use Template**.
 
 ---
 
-## 🚀 Get Started
+## 🚀 Quick Start: With Replit Agent
 
 👉 Start by telling the Replit Agent:
-“Please run first-time setup for this project.”
+```
+Please run first-time setup for this project.”
+```
+
+## 🚀 Quick Start: Alternative
+
+Edit the `noumena.config` file in the project root:
+
+```
+NPL_TENANT=my-company
+NPL_APP=my-app
+```
+
+**Find these values at:** `portal.noumena.cloud/{tenant}/{app}`
+
+All other URLs (NPL Engine, Keycloak) are **automatically derived** from these!
+
+**Add Keycloak Secrets**
+
+To configure Keycloak and create test users, add these in Replit's **Secrets** tab (🔒):
+
+| Secret | Description |
+|--------|-------------|
+| `KEYCLOAK_ADMIN_USER` | Keycloak admin username |
+| `KEYCLOAK_ADMIN_PASSWORD` | Keycloak admin password |
+
+These enable the optional Keycloak configuration steps during setup.
+
+### 2. Run Full Setup (Interactive)
+
+```bash
+make setup
+```
+
+This **interactive** setup will:
+1. Generate `.env` file with derived URLs
+2. Install the NPL CLI and npm dependencies
+3. **Prompt you to login** to Noumena Cloud (opens browser)
+4. Deploy your NPL code to Noumena Cloud
+5. Generate TypeScript API client
+6. **Ask if you want to configure Keycloak** (enables dev mode login)
+7. **Ask if you want to provision test users** (alice, bob, etc.)
+
+> **Already logged in?** Use `make setup-quick` to skip the login prompt.
