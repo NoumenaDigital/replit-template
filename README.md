@@ -6,6 +6,22 @@ Build React frontends on Replit that connect to NPL backends running on [Noumena
 ![React](https://img.shields.io/badge/React-19-61dafb)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6)
 
+## Prerequisites: Noumena Cloud Account
+
+Before using this template, you'll need a **Noumena Cloud subscription** (free trial available):
+
+1. **Register at [https://portal.noumena.cloud/](https://portal.noumena.cloud/)**
+   - Sign up for an account
+   - Create a **tenant** (this is your bucket for all deployments)
+   - Select a subscription plan (start with the free trial)
+
+2. **Create an application**
+   - Once your tenant is created, create a new **application** in Noumena Cloud
+   - Note down the **tenant** and **app** slugs from the URL: `https://portal.noumena.cloud/{tenant}/{app}`
+   - You'll need these values when configuring your project
+
+---
+
 ## 📥 Use This Template
 
 ### Option 1: From GitHub (Recommended)
@@ -28,20 +44,6 @@ If this is published as a Replit template, simply click **Use Template**.
 ---
 
 ## 🚀 Quick Start
-
-### Prerequisites: Noumena Cloud Account
-
-Before you begin, you'll need a **Noumena Cloud subscription** (free trial available):
-
-1. **Register at [https://portal.noumena.cloud/](https://portal.noumena.cloud/)**
-   - Sign up for an account
-   - Create a **tenant** (this is your bucket for all deployments)
-   - Select a subscription plan (start with the free trial)
-
-2. **Create an application**
-   - Once your tenant is created, create a new **application** in Noumena Cloud
-   - Note down the **tenant** and **app** slugs from the URL: `https://portal.noumena.cloud/{tenant}/{app}`
-   - You'll need these values in the next step
 
 ### 1. Configure Your Project
 
