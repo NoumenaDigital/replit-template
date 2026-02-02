@@ -52,14 +52,16 @@ Please run first-time setup for this project.
 
 ## 🚀 Quick Start: Alternative
 
-Edit the `noumena.config` file in the project root:
+### 1. Configure Your Project
+
+**Edit the `noumena.config` file in the project root:**
 
 ```
-NPL_TENANT=my-company
-NPL_APP=my-app
+NPL_TENANT=tenant
+NPL_APP=app
 ```
 
-**Find these values at:** `portal.noumena.cloud/{tenant}/{app}` **(see above)**
+Find these values at: `portal.noumena.cloud/{tenant}/{app}` (see above)
 
 All other URLs (NPL Engine, Keycloak) are **automatically derived** from these!
 

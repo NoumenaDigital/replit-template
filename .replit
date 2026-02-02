@@ -36,17 +36,17 @@ run = ["sh", "-c", "cd frontend && npm run build && npm run preview"]
 
 # Replit allows max 10 workflows - keeping only essential ones
 # Use 'make <command>' directly for others (see: make help)
-# [workflows]
+[workflows]
 # runButton = "🚀 Full Setup"
 
-# [[workflows.workflow]]
-# name = "🚀 Full Setup"
-# mode = "sequential"
-# author = "agent"
+[[workflows.workflow]]
+name = "🚀 Full Setup"
+mode = "sequential"
+author = "agent"
 
-# [[workflows.workflow.tasks]]
-# task = "shell.exec"
-# args = "make setup"
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "make setup"
 
 # [[workflows.workflow]]
 # name = "▶️ Start Dev Server"

@@ -1,5 +1,4 @@
 # NPL + React Replit Template Makefile
-# Alternative to workflow buttons for those who prefer make
 
 .PHONY: help setup setup-quick env install check-setup deploy deploy-npl-clean deploy-npl client users keycloak add-redirect run build deploy-frontend check test clean lsp login preflight bootstrap
 
@@ -129,7 +128,7 @@ deploy: check-setup deploy-npl-clean build deploy-frontend
 # Deploy NPL, clearing any previous deployment first (recommended when changing protocols)
 deploy-npl-clean: check-setup
 	@echo "🧹 Clearing existing protocols..."
-	@source noumena.config  && export PATH="$$HOME/.npl/bin:$$PATH" && npl cloud clear --tenant $$NPL_TENANT --app $$NPL_APP
+	@source ./noumena.config  && export PATH="$$HOME/.npl/bin:$$PATH" && npl cloud clear --tenant $$NPL_TENANT --app $$NPL_APP
 	@./scripts/deploy-npl.sh
 	@echo ""
 	@echo "💡 Don't forget: run 'make client' to regenerate TypeScript types!"
