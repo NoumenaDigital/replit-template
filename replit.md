@@ -1,48 +1,40 @@
 # NPL + React Replit Template
 
+## 🛑 STOP - READ THIS FIRST
+
+**DO NOT run npm commands directly. DO NOT start the dev server yet.**
+
+This project requires setup before it can run. The setup process:
+1. Configures connection to Noumena Cloud
+2. Opens a browser for authentication (user must log in)
+3. Deploys the backend
+4. Generates TypeScript types
+
 ---
 
-## 🤖 Agent: First Interaction Required
+## MANDATORY FIRST STEPS
 
-If the user has not yet configured this project, follow these steps in order:
+**Before doing ANYTHING else, complete these steps in order:**
 
-### Step 1: Collect Configuration Values
-
-Immediately ask the user for the following values using an input form:
-- **NPL_TENANT**: The tenant slug from Noumena Cloud
-- **NPL_APP**: The application slug from Noumena Cloud
-
-### Step 2: Create Configuration File
-
-Write these values into the repository root file `noumena.config` using this pattern:
-
-```bash
+### Step 1: Edit `noumena.config`
+```
 NPL_TENANT=your-tenant-name
 NPL_APP=your-app-name
 ```
+Ask the user for these values if you don't know them.
 
-### Step 3: Collect Keycloak Credentials
+### Step 2: Add Keycloak Secrets (in Replit Secrets tab)
+```
+KEYCLOAK_ADMIN_USER=admin-username
+KEYCLOAK_ADMIN_PASSWORD=admin-password
+```
+These are needed for `make users` and `make keycloak` commands.
 
-Using a Secrets input form, ask the user for the following values (which can be found in the **Keycloak service section** of the Noumena Cloud app):
-
-⚠️ **Important**: Pay attention to the order, to avoid confusion:
-1. **KEYCLOAK_ADMIN_USER**
-2. **KEYCLOAK_ADMIN_PASSWORD**
-
-### Step 4: Store Secrets
-
-Store the Keycloak credentials as **Replit Secrets**.
-
-### Step 5: Run Setup
-
-Execute the setup command:
-
+### Step 3: Run setup
 ```bash
 make setup
 ```
+This will open a browser for Noumena Cloud login - the user must authenticate.
 
-⚠️ **Critical**: 
-- Do **NOT** run any commands before the above steps are completed
-- Do **NOT** start the frontend server before setup is finished
+**⚠️ The frontend WILL NOT WORK without completing all three steps.**
 
----
