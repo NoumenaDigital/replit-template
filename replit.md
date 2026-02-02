@@ -2,20 +2,47 @@
 
 ---
 
-## Agent: First interaction required
+## 🤖 Agent: First Interaction Required
 
-If the user has not yet configured this project:
+If the user has not yet configured this project, follow these steps in order:
 
-1. Immediately ask the user for the following values, using an input form:
-   - NPL_TENANT
-   - NPL_APP
-2. Write these values into the repo root file `noumena.config` with the pattern
-```
+### Step 1: Collect Configuration Values
+
+Immediately ask the user for the following values using an input form:
+- **NPL_TENANT**: The tenant slug from Noumena Cloud
+- **NPL_APP**: The application slug from Noumena Cloud
+
+### Step 2: Create Configuration File
+
+Write these values into the repository root file `noumena.config` using this pattern:
+
+```bash
 NPL_TENANT=your-tenant-name
 NPL_APP=your-app-name
 ```
-3. With a Secrets input form, ask the user for the following values, which the user can find in the Keycloak service section of the NOUMENA Cloud app (please pay attention to the order):
-   - KEYCLOAK_ADMIN_USER
-   - KEYCLOAK_ADMIN_PASSWORD
-4. Store those values as Replit Secrets 
-5. Then run `make setup`. Do not run any commands before this is done. Do not start the frontend server before this is done.
+
+### Step 3: Collect Keycloak Credentials
+
+Using a Secrets input form, ask the user for the following values (which can be found in the **Keycloak service section** of the Noumena Cloud app):
+
+⚠️ **Important**: Pay attention to the order, to avoid confusion:
+1. **KEYCLOAK_ADMIN_USER**
+2. **KEYCLOAK_ADMIN_PASSWORD**
+
+### Step 4: Store Secrets
+
+Store the Keycloak credentials as **Replit Secrets**.
+
+### Step 5: Run Setup
+
+Execute the setup command:
+
+```bash
+make setup
+```
+
+⚠️ **Critical**: 
+- Do **NOT** run any commands before the above steps are completed
+- Do **NOT** start the frontend server before setup is finished
+
+---
