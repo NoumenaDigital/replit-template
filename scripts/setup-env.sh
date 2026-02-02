@@ -29,8 +29,7 @@ if [ -z "$NPL_TENANT" ]; then
     echo ""
     echo "❌ Error: NPL_TENANT not configured"
     echo ""
-    echo "   Option 1 (Recommended): Edit noumena.config file"
-    echo "   Option 2: Add NPL_TENANT in Replit's Secrets tab"
+    echo "   Edit noumena.config file to provide value"
     echo ""
     exit 1
 fi
@@ -39,8 +38,7 @@ if [ -z "$NPL_APP" ]; then
     echo ""
     echo "❌ Error: NPL_APP not configured"
     echo ""
-    echo "   Option 1 (Recommended): Edit noumena.config file"
-    echo "   Option 2: Add NPL_APP in Replit's Secrets tab"
+    echo "   Edit noumena.config file to provide value"
     echo ""
     exit 1
 fi
