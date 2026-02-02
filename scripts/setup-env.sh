@@ -24,43 +24,25 @@ else
     exit 1
 fi
 
-# Check if we have the required values, prompt if missing
+# Check if we have the required values
 if [ -z "$NPL_TENANT" ]; then
     echo ""
-    # Prompt for NPL_TENANT
-    read -p "❓ Variable NPL_TENANT is not set. Please enter your NPL_TENANT: " NPL_TENANT
-    # Check if still empty
-    if [ -z "$NPL_TENANT" ]; then
-        echo ""
-        echo "❌ Error: NPL_TENANT cannot be empty"
-        echo ""
-        exit 1
-    fi
-    # Update noumena.config file
-    if [ -f "noumena.config" ]; then
-        sed -i.bak "s/^NPL_TENANT=.*/NPL_TENANT=$NPL_TENANT/" noumena.config
-        rm -f noumena.config.bak
-        echo "✅ Updated NPL_TENANT in noumena.config"
-    fi
+    echo "❌ Error: NPL_TENANT not configured"
+    echo ""
+    echo "   Option 1 (Recommended): Edit noumena.config file"
+    echo "   Option 2: Add NPL_TENANT in Replit's Secrets tab"
+    echo ""
+    exit 1
 fi
 
 if [ -z "$NPL_APP" ]; then
     echo ""
-    # Prompt for NPL_APP
-    read -p "❓ Variable NPL_APP is not set. Please enter your NPL_APP: " NPL_APP
-    # Check if still empty
-    if [ -z "$NPL_APP" ]; then
-        echo ""
-        echo "❌ Error: NPL_APP cannot be empty"
-        echo ""
-        exit 1
-    fi
-    # Update noumena.config file
-    if [ -f "noumena.config" ]; then
-        sed -i.bak "s/^NPL_APP=.*/NPL_APP=$NPL_APP/" noumena.config
-        rm -f noumena.config.bak
-        echo "✅ Updated NPL_APP in noumena.config"
-    fi
+    echo "❌ Error: NPL_APP not configured"
+    echo ""
+    echo "   Option 1 (Recommended): Edit noumena.config file"
+    echo "   Option 2: Add NPL_APP in Replit's Secrets tab"
+    echo ""
+    exit 1
 fi
 
 # Derive URLs from tenant and app name
