@@ -14,6 +14,4 @@ If the user has not yet configured this project:
 NPL_TENANT=your-tenant-name
 NPL_APP=your-app-name
 ```
-3. Then instruct the user to click ▶ Run (which runs `make setup`)
-
-Do not run any commands before this is done.
+3. Then instruct the user to click ▶ Run (which runs `make setup`). Do not run any commands before this is done. Do not start the frontend server before this is done.
