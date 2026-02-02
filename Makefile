@@ -1,7 +1,7 @@
 # NPL + React Replit Template Makefile
 # Alternative to workflow buttons for those who prefer make
 
-.PHONY: help setup setup-quick env install check-setup deploy deploy-npl deploy-npl-clean deploy-frontend client users keycloak add-redirect run build clean login preflight lsp bootstrap
+.PHONY: help setup setup-quick env install check-setup deploy deploy-npl-clean deploy-npl client users keycloak add-redirect run build deploy-frontend check test clean lsp login preflight bootstrap
 
 # Default target
 help:
