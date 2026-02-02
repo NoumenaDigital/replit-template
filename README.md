@@ -11,14 +11,14 @@ Build React frontends on Replit that connect to NPL backends running on [Noumena
 ### Option 1: From GitHub (Recommended)
 
 1. Go to [Replit](https://replit.com)
-2. Click **Create Repl** → **Import from GitHub**
-3. Paste this URL: `https://github.com/jk-nd/npl-replit-template`
+2. Click **Import code or design** → **Import from GitHub**
+3. Paste this URL: `https://github.com/NoumenaDigital/replit-template`
 4. Click **Import from GitHub**
 
 ### Option 2: Fork on GitHub First
 
 1. Fork this repository on GitHub
-2. In Replit, click **Create Repl** → **Import from GitHub**
+2. In Replit, click **Import code or design** → **Import from GitHub**
 3. Select your forked repository
 
 ### Option 3: Use as Replit Template
