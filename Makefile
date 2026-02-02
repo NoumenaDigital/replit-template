@@ -13,6 +13,7 @@ help:
 	@echo "  setup      - Full interactive setup (includes login prompt)"
 	@echo "  env        - Generate .env from NPL_TENANT and NPL_APP"
 	@echo "  install    - Install NPL CLI and npm dependencies"
+	@echo "  lsp        - Install NPL Language Server"
 	@echo "  users      - Provision seed users in Keycloak"
 	@echo "  keycloak   - Configure Keycloak client (redirect URIs)"
 	@echo "  setup-quick - Setup without login, keycloak configuration nor user provisioning (use if those steps already done)"
@@ -34,7 +35,6 @@ help:
 	@echo "  login      - Login to Noumena Cloud"
 	@echo "  preflight  - Run pre-flight checks"
 	@echo "  add-redirect URL=<url> - Add custom redirect URI for external hosting"
-	@echo "  lsp        - Install NPL Language Server"
 	@echo "  bootstrap  - Create initial protocol instances (customize scripts/bootstrap.sh first)"
 	@echo ""
 	@echo "Configuration (edit noumena.config file):"
@@ -87,7 +87,7 @@ setup: env install lsp
 	@echo "Or click the 'Run' button in Replit."
 
 # Quick setup (assumes already logged in)
-setup-quick: env install lsp deploy-npl client
+setup-quick: env install lsp client npl-deploy
 	@echo ""
 	@echo "✅ Setup complete! Use 'make run' to start the frontend."
 
