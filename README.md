@@ -8,7 +8,7 @@ Build React frontends on Replit that connect to NPL backends running on [Noumena
 
 ## Prerequisites: Noumena Cloud Account
 
-Before using this template, you'll need a **Noumena Cloud subscription** (free trial available):
+You'll need a **Noumena Cloud subscription** (free trial available) to deploy the NPL backend and (optionally) the React frontend:
 
 1. **Register at [https://portal.noumena.cloud/](https://portal.noumena.cloud/)**
    - Sign up for an account
