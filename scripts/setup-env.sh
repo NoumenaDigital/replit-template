@@ -13,25 +13,54 @@ if [ -f "noumena.config" ]; then
     echo "📁 Found noumena.config file"
     # Source the config file (it uses shell variable syntax)
     source noumena.config
-fi
-
-# Check if we have the required values
-if [ -z "$NPL_TENANT" ]; then
+else
     echo ""
-    echo "❌ Error: NPL_TENANT not configured"
+    echo "❌ Error: noumena.config file not found"
     echo ""
-    echo "   Edit noumena.config file to define the value"
+    echo "   Please create a noumena.config file in the project root with:"
+    echo "   NPL_TENANT=your-tenant"
+    echo "   NPL_APP=your-app"
     echo ""
     exit 1
+fi
+
+# Check if we have the required values, prompt if missing
+if [ -z "$NPL_TENANT" ]; then
+    echo ""
+    # Prompt for NPL_TENANT
+    read -p "❓ Variable NPL_TENANT is not set. Please enter your NPL_TENANT: " NPL_TENANT
+    # Check if still empty
+    if [ -z "$NPL_TENANT" ]; then
+        echo ""
+        echo "❌ Error: NPL_TENANT cannot be empty"
+        echo ""
+        exit 1
+    fi
+    # Update noumena.config file
+    if [ -f "noumena.config" ]; then
+        sed -i.bak "s/^NPL_TENANT=.*/NPL_TENANT=$NPL_TENANT/" noumena.config
+        rm -f noumena.config.bak
+        echo "✅ Updated NPL_TENANT in noumena.config"
+    fi
 fi
 
 if [ -z "$NPL_APP" ]; then
     echo ""
-    echo "❌ Error: NPL_APP not configured"
-    echo ""
-    echo "   Edit noumena.config file to define the value"
-    echo ""
-    exit 1
+    # Prompt for NPL_APP
+    read -p "❓ Variable NPL_APP is not set. Please enter your NPL_APP: " NPL_APP
+    # Check if still empty
+    if [ -z "$NPL_APP" ]; then
+        echo ""
+        echo "❌ Error: NPL_APP cannot be empty"
+        echo ""
+        exit 1
+    fi
+    # Update noumena.config file
+    if [ -f "noumena.config" ]; then
+        sed -i.bak "s/^NPL_APP=.*/NPL_APP=$NPL_APP/" noumena.config
+        rm -f noumena.config.bak
+        echo "✅ Updated NPL_APP in noumena.config"
+    fi
 fi
 
 # Derive URLs from tenant and app name

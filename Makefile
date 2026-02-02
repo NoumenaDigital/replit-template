@@ -1,7 +1,7 @@
 # NPL + React Replit Template Makefile
 # Alternative to workflow buttons for those who prefer make
 
-.PHONY: help setup setup-quick env config install check-setup deploy deploy-npl-clean deploy-npl client users keycloak add-redirect run build deploy-frontend check test clean lsp login preflight bootstrap
+.PHONY: help setup setup-quick env install check-setup deploy deploy-npl-clean deploy-npl client users keycloak add-redirect run build deploy-frontend check test clean lsp login preflight bootstrap
 
 # Default target
 help:
@@ -11,7 +11,6 @@ help:
 	@echo ""
 	@echo "Initial setup targets:"
 	@echo "  setup      - Full interactive setup (includes login prompt)"
-	@echo "  config     - Prompt for NPL_TENANT and NPL_APP parameters if not set"
 	@echo "  env        - Generate .env from NPL_TENANT and NPL_APP"
 	@echo "  install    - Install NPL CLI and npm dependencies"
 	@echo "  lsp        - Install NPL Language Server"
@@ -99,13 +98,8 @@ setup-quick: env install lsp npl-deploy client
 	@echo "✅ Setup complete! Use 'make run' to start the frontend."
 
 # Generate environment configuration
-env: .env
-
-.env: config noumena.config
+env:
 	@./scripts/setup-env.sh
-
-config:
-	@./scripts/configure-deployment.sh
 
 # Install dependencies
 install:
