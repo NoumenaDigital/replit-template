@@ -6,7 +6,7 @@
 
 If the user has not yet configured this project:
 
-1. Immediately ask the user for the following values:
+1. Immediately ask the user for the following values, using an input form:
    - NPL_TENANT
    - NPL_APP
 2. Write these values into the repo root file `noumena.config` with the pattern
@@ -14,7 +14,7 @@ If the user has not yet configured this project:
 NPL_TENANT=your-tenant-name
 NPL_APP=your-app-name
 ```
-3. Ten ask the user for the following values, which the user can find in the Keycloak service section of the NOUMENA Cloud app:
+3. With a Secrets input form, ask the user for the following values, which the user can find in the Keycloak service section of the NOUMENA Cloud app (please pay attention to the order):
    - KEYCLOAK_ADMIN_USER
    - KEYCLOAK_ADMIN_PASSWORD
 4. Store those values as Replit Secrets 
