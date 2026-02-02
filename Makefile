@@ -129,7 +129,7 @@ deploy: check-setup deploy-npl-clean build deploy-frontend
 # Deploy NPL, clearing any previous deployment first (recommended when changing protocols)
 deploy-npl-clean: check-setup
 	@echo "🧹 Clearing existing protocols..."
-	@export PATH="$$HOME/.npl/bin:$$PATH" && npl cloud clear --tenant $$NPL_TENANT --app $$NPL_APP
+	@source noumena.config  && export PATH="$$HOME/.npl/bin:$$PATH" && npl cloud clear --tenant $$NPL_TENANT --app $$NPL_APP
 	@./scripts/deploy-npl.sh
 	@echo ""
 	@echo "💡 Don't forget: run 'make client' to regenerate TypeScript types!"
