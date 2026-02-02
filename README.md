@@ -47,7 +47,7 @@ If this is published as a Replit template, simply click **Use Template**.
 
 👉 Start by telling the Replit Agent:
 ```
-Please run first-time setup for this project.”
+Please run first-time setup for this project.
 ```
 
 ## 🚀 Quick Start: Alternative
@@ -59,7 +59,7 @@ NPL_TENANT=my-company
 NPL_APP=my-app
 ```
 
-**Find these values at:** `portal.noumena.cloud/{tenant}/{app}`
+**Find these values at:** `portal.noumena.cloud/{tenant}/{app}` **(see above)**
 
 All other URLs (NPL Engine, Keycloak) are **automatically derived** from these!
 
