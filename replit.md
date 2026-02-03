@@ -36,5 +36,7 @@ make setup
 ```
 This will open a browser for Noumena Cloud login - the user must authenticate.
 
+Agent: When prompting the user to log in, please provide link with device code included for the user to click.
+
 **⚠️ The frontend WILL NOT WORK without completing all three steps.**
 
