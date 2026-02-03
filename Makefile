@@ -90,7 +90,6 @@ setup: env install lsp
 	@echo "  make run"
 	@echo ""
 	@echo "Or click the 'Run' button in Replit."
-	@touch .setup_done
 
 # Quick setup (assumes already logged in, and keycloak/users done)
 setup-quick: env install lsp deploy-npl-clean client
@@ -159,8 +158,7 @@ endif
 	@./scripts/add-redirect-uri.sh $(URL)
 
 # Start development server
-run:
-	@test -f .setup_done || (echo "❌ Run make setup first" && exit 1)
+run: check-setup
 	@cd frontend && npm run dev
 
 # Build for production
