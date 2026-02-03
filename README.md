@@ -49,6 +49,7 @@ If this is published as a Replit template, simply click **Use Template**.
 ```
 Please run first-time setup for this project.
 ```
+Follow the indications about next steps provided by the Agent.
 
 ## 🚀 Quick Start: Alternative
 
