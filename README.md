@@ -51,7 +51,7 @@ Please run first-time setup for this project.
 ```
 Follow the indications about next steps provided by the Agent.
 
-## 🚀 Quick Start: Alternative
+## 🚀 Quick Start: With Preconfiguration and Makefile
 
 ### 1. Configure Your Project
 
