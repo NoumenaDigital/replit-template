@@ -44,8 +44,6 @@ help:
 	@echo "  KEYCLOAK_ADMIN_USER     - Keycloak admin username"
 	@echo "  KEYCLOAK_ADMIN_PASSWORD - Keycloak admin password"
 
-replit-run: env install lsp login deploy-npl-clean client keycloak users run
-
 # Full setup (interactive - will prompt for login and optional steps)
 setup: env install lsp
 	@echo ""
